@@ -696,6 +696,8 @@ a:focus-visible {
 }
 
 .site-footer {
+  position: relative;
+  isolation: isolate;
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   padding: 3rem 0;
@@ -703,7 +705,8 @@ a:focus-visible {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: start;
   gap: 3rem;
-  color: var(--muted);
+  color: #ffffff;
+  background: #172b4d;
 }
 
 .site-footer > div,
@@ -713,7 +716,7 @@ a:focus-visible {
 
 .site-footer strong {
   display: block;
-  color: var(--ink);
+  color: #ffffff;
   font-size: 1.1rem;
   line-height: 1.4;
 }
@@ -738,8 +741,17 @@ a:focus-visible {
 
 .site-footer nav a:hover,
 .site-footer nav a:focus-visible {
-  color: var(--deep);
+  color: #c99a45;
   text-decoration: underline;
+}
+
+/* Full-width footer background while retaining the existing content layout. */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  z-index: -1;
+  background: #172b4d;
 }
 
 .logo-page {
