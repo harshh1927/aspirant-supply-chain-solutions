@@ -698,26 +698,48 @@ a:focus-visible {
 .site-footer {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 3rem;
   color: var(--muted);
 }
 
+.site-footer > div,
+.site-footer nav {
+  min-width: 0;
+}
+
 .site-footer strong {
+  display: block;
   color: var(--ink);
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 .site-footer p {
-  margin: 0.25rem 0 0;
+  margin: 0.5rem 0 0;
+}
+
+.site-footer .copyright {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 .site-footer nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  align-content: start;
+  gap: 0.75rem 1.5rem;
   font-weight: 700;
+}
+
+.site-footer nav a:hover,
+.site-footer nav a:focus-visible {
+  color: var(--deep);
+  text-decoration: underline;
 }
 
 .logo-page {
@@ -1005,9 +1027,13 @@ a:focus-visible {
     padding-bottom: 4rem;
   }
 
-  .hero-actions,
-  .site-footer {
+  .hero-actions {
     flex-direction: column;
+  }
+
+  .site-footer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
   }
 
   .button,
