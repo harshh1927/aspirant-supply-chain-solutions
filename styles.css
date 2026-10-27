@@ -163,16 +163,29 @@ a {
   color: #ffffff;
 }
 
-.nav-links > a[href="#careers"]:not(.nav-cta),
-.nav-links > a[href="#why-choose"]:not(.nav-cta) {
-  background: #fff5df;
-  border-color: #e5c98b;
+/* Business Solutions and Career Services sit next to each other in the navigation,
+   with distinct colors; Why Choose Us retains the default About tab style. */
+.nav-links > a[href="#business"]:not(.nav-cta) {
+  background: #172b4d;
+  border-color: #172b4d;
+  color: #ffffff;
+}
+
+.nav-links > a[href="#business"]:not(.nav-cta):hover,
+.nav-links > a[href="#business"]:not(.nav-cta):focus-visible {
+  background: #304b73;
+  border-color: #304b73;
+  color: #ffffff;
+}
+
+.nav-links > a[href="#careers"]:not(.nav-cta) {
+  background: #fff0c9;
+  border-color: #c99a45;
+  color: #172b4d;
 }
 
 .nav-links > a[href="#careers"]:not(.nav-cta):hover,
-.nav-links > a[href="#careers"]:not(.nav-cta):focus-visible,
-.nav-links > a[href="#why-choose"]:not(.nav-cta):hover,
-.nav-links > a[href="#why-choose"]:not(.nav-cta):focus-visible {
+.nav-links > a[href="#careers"]:not(.nav-cta):focus-visible {
   background: #c99a45;
   border-color: #c99a45;
   color: #172b4d;
