@@ -143,6 +143,41 @@ a {
   white-space: nowrap;
 }
 
+/* Soft navy-and-gold navigation tabs on the homepage. */
+.nav-links > a:not(.nav-cta) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #dbe3ed;
+  border-radius: 7px;
+  background: #edf2f8;
+  color: #172b4d;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.nav-links > a:not(.nav-cta):hover,
+.nav-links > a:not(.nav-cta):focus-visible {
+  background: #172b4d;
+  border-color: #172b4d;
+  color: #ffffff;
+}
+
+.nav-links > a[href="#careers"]:not(.nav-cta),
+.nav-links > a[href="#why-choose"]:not(.nav-cta) {
+  background: #fff5df;
+  border-color: #e5c98b;
+}
+
+.nav-links > a[href="#careers"]:not(.nav-cta):hover,
+.nav-links > a[href="#careers"]:not(.nav-cta):focus-visible,
+.nav-links > a[href="#why-choose"]:not(.nav-cta):hover,
+.nav-links > a[href="#why-choose"]:not(.nav-cta):focus-visible {
+  background: #c99a45;
+  border-color: #c99a45;
+  color: #172b4d;
+}
+
 .nav-links a:hover,
 .text-link:hover,
 .resource-card a:hover {
