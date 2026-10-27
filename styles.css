@@ -1047,4 +1047,54 @@ a:focus-visible {
     right: 1rem;
     bottom: 1rem;
   }
+  
+/* Professional footer layout fix */
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+.site-footer > div {
+  min-width: 0;
+}
+
+.site-footer strong {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.site-footer p {
+  line-height: 1.7;
+  margin-top: 0.75rem;
+}
+
+.site-footer .copyright {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.site-footer nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 1rem 2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .site-footer nav {
+    gap: 1rem;
+  }
+}
+
 }
