@@ -1107,3 +1107,89 @@ a:focus-visible {
     bottom: 1rem;
   }
 }
+
+/* Professional Corporate Footer */
+
+.site-footer {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 48px max(24px, calc((100% - 1180px) / 2));
+  background: #f6f8f7;
+  color: #60706d;
+  box-sizing: border-box;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-brand strong {
+  display: block;
+  font-size: 22px;
+  color: #142423;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+  color: #142423;
+  margin: 0 0 20px;
+}
+
+.footer-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 30px;
+}
+
+.site-footer .footer-links {
+  display: block;
+}
+
+.footer-link-grid a {
+  color: #60706d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-link-grid a:hover {
+  color: #142423;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #dce5e2;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    padding: 36px 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-link-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
